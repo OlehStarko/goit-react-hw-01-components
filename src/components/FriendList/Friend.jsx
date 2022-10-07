@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import friend from '../../data/friends.json';
 
 import css from 'css/friends.module.css';
 
@@ -12,8 +12,4 @@ export const Friend = ({ friend: { avatar, name, isOnline } }) => {
   );
 };
 
-Friend.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool,
-};
+<Friend avatar={friend.avatar} name={friend.name} isOnline={friend.isOnline} />;

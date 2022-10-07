@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import transaction from '../../data/transactions.json';
 
 export const Transaction = ({
   transaction: { id, type, amount, currency },
@@ -11,10 +11,8 @@ export const Transaction = ({
     </>
   );
 };
-
-Transaction.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  currency: PropTypes.string.isRequired,
-};
+<Transaction
+  type={transaction.type}
+  amount={transaction.amount}
+  currency={transaction.currency}
+/>;

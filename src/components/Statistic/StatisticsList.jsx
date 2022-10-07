@@ -1,12 +1,10 @@
 import { Statistics } from './Statistics';
 import css from 'css/statistics.module.css';
 
-export const StatisticsList = ({ StatisticsData }) => {
+export const StatisticsList = ({ StatisticsData, title }) => {
   return (
     <div className={css.statistic__container}>
-      <div className={css.statistic__titleBox}>
-        <h2 className={css.statistic__title}> UPLOAD STATS</h2>
-      </div>
+      {title && <h2 className={css.statistic__title}>{title}</h2>}
 
       <ul className={css.statistic__list}>
         {StatisticsData.map(statistic => (

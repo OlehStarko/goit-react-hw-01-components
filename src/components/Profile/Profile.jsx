@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-
+import user from '../../data/user.json';
 import css from 'css/userCard.module.css';
 
 export const Profile = ({
@@ -33,13 +32,10 @@ export const Profile = ({
     </div>
   );
 };
-
-Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
-};
+<Profile
+  username={user.username}
+  tag={user.tag}
+  location={user.location}
+  avatar={user.avatar}
+  stats={user.stats}
+/>;

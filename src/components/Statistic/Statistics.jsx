@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import statistic from '../../data/data.json';
 
 export const Statistics = ({ statistic: { label, percentage } }) => {
   return (
@@ -9,7 +9,4 @@ export const Statistics = ({ statistic: { label, percentage } }) => {
   );
 };
 
-Statistics.propTypes = {
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
-};
+<Statistics label={statistic.label} percentage={statistic.percentage} />;
